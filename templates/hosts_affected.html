@@ -95,7 +95,7 @@ h1 span {
 <h1 align="center">Hosts Affected</h1>
 <table class="responstable">
 
-    {%for v in (hosts_affected)%}
+
     <tr>
         <th>Plugin ID</th>
         <th>Name</th>
@@ -105,6 +105,7 @@ h1 span {
         <th>Mac Address</th>
         <th>Port</th>
     </tr>
+     {%for v in (hosts_affected)%}
     <tr>
         <td>{{v['pluginID']}}</td>
         <td>{{v['name']}}</td>
