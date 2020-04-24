@@ -24,7 +24,7 @@ def get_info():
 
     current_devices = []
 
-    for device in sc.analysis.vulns(tool='sumremediation'): #(('lastSeen','=','0:30'), tool='sumip'):
+    for device in sc.analysis.vulns(tool='sumremediation', sort_field='score', sort_direction='desc'): #(('lastSeen','=','0:30'), tool='sumip'):
         current_devices.append(device)
 
     # logout of SC
@@ -37,7 +37,7 @@ def get_info():
 def get_details(plugins):
     sc.login(username, password)
     detail_info = []
-    for details in sc.analysis.vulns(('pluginID', '=', plugins), tool='sumid'):
+    for details in sc.analysis.vulns(('pluginID', '=', plugins), tool='sumid', sort_field='vprScore', sort_direction='desc'):
         detail_info.append(details)
 
     sc.logout()

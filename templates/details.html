@@ -93,15 +93,16 @@ h1 span {
 <body>
 
 <h1 align="center">Solution Details</h1>
-<table class="responstable">
+<table class="responstable" class="sortable" >
 
-    {%for v in (detail_info)%}
+
     <tr>
         <th>Plugin ID</th>
         <th>Name</th>
         <th>Hosts Affected</th>
         <th>VPR Scores</th>
     </tr>
+    {%for v in (detail_info)%}
     <tr>
         <td><a href="http://localhost:5001/hosts_affected/{{v['pluginID']}}">{{v['pluginID']}}</a></td>
         <td>{{v['name']}}</td>
