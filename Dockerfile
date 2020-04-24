@@ -9,6 +9,9 @@ CMD mkdir /usr/src/app/templates
 
 ADD SC_newHost.py /usr/src/app/
 ADD templates/index.html /usr/src/app/templates/
+ADD templates/details.html /usr/src/app/templates/
+ADD templates/hosts_affected.html /usr/src/app/templates/
+ADD templates/host_plugin_details.html /usr/src/app/templates/
 ENV PATH "$PATH:/usr/bin/env/"
 
 EXPOSE 5001
