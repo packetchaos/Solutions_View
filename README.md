@@ -8,7 +8,7 @@ to get more information
 # Download the Repository
 Clone the repository to your local machine
 
-git clone https://github.com/packetchaos/Solutions_View.git
+    git clone https://github.com/packetchaos/Solutions_View.git
 
 # Update the Script
 You will need to update the script SC_newHost.py with your SC credentials
